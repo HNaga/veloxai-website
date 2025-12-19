@@ -40,11 +40,6 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#courses" className="text-muted-foreground hover:text-foreground transition-colors">
-                  {t.nav.courses}
-                </a>
-              </li>
-              <li>
                 <a href="#about" className="text-muted-foreground hover:text-foreground transition-colors">
                   {t.nav.about}
                 </a>

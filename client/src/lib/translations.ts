@@ -4,7 +4,6 @@ export const translations = {
     nav: {
       home: 'Home',
       services: 'Services',
-      courses: 'Courses',
       about: 'About',
       contact: 'Contact',
     },
@@ -45,23 +44,23 @@ export const translations = {
       },
     },
     // Courses Section
-    courses: {
-      title: 'Learn from Our Experts',
-      subtitle: 'Master AI automation through our comprehensive Udemy courses',
-      viewCourses: 'View All Courses on Udemy',
-      course1: {
-        title: 'AI Automation Fundamentals',
-        description: 'Learn the basics of AI automation and how to implement it in your organization',
-      },
-      course2: {
-        title: 'Advanced Workflow Automation',
-        description: 'Master advanced techniques for automating complex business workflows',
-      },
-      course3: {
-        title: 'AI Integration Best Practices',
-        description: 'Discover best practices for integrating AI into your existing systems',
-      },
-    },
+    // courses: {
+    //   title: 'Learn from Our Experts',
+    //   subtitle: 'Master AI automation through our comprehensive Udemy courses',
+    //   viewCourses: 'View All Courses on Udemy',
+    //   course1: {
+    //     title: 'AI Automation Fundamentals',
+    //     description: 'Learn the basics of AI automation and how to implement it in your organization',
+    //   },
+    //   course2: {
+    //     title: 'Advanced Workflow Automation',
+    //   description: 'Master advanced techniques for automating complex business workflows',
+    //   },
+    //   course3: {
+    //     title: 'AI Integration Best Practices',
+    //     description: 'Discover best practices for integrating AI into your existing systems',
+    //   },
+    // },
     // About Section
     about: {
       title: 'About VeloxAI',
@@ -104,7 +103,6 @@ export const translations = {
     nav: {
       home: 'الرئيسية',
       services: 'الخدمات',
-      courses: 'الدورات',
       about: 'حول',
       contact: 'اتصل',
     },
