@@ -1,10 +1,16 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { translations } from '@/lib/translations';
 import { ArrowRight } from 'lucide-react';
+import { useLocation } from 'wouter';
 
 export default function HeroSection() {
   const { language, isArabic } = useLanguage();
   const t = translations[language];
+  const [, setLocation] = useLocation();
+
+  const handleGetStartedClick = () => {
+    setLocation("#contact");
+  };
 
   return (
     <section id="home" className={`relative min-h-screen flex items-center overflow-hidden ${isArabic ? 'rtl' : 'ltr'}`}>
@@ -32,10 +38,21 @@ export default function HeroSection() {
 
           {/* CTA Buttons */}
           <div className={`flex flex-col sm:flex-row gap-4 ${isArabic ? 'flex-row-reverse' : ''}`}>
-            <button className="px-8 py-4 bg-accent hover:bg-accent/90 text-accent-foreground font-semibold rounded-lg transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl">
+            <button
+              onClick={handleGetStartedClick}
+              className="px-8 py-4 bg-accent hover:bg-accent/90 text-accent-foreground font-semibold rounded-lg transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
+            >
               {t.hero.cta}
               <ArrowRight size={20} />
             </button>
+            <a
+              href="https://calendly.com/veloxai/30min?month=2025-12"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-4 bg-white/20 hover:bg-white/30 text-white font-semibold rounded-lg transition-all duration-300 backdrop-blur-sm border border-white/30 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
+            >
+              {t.hero.bookDiscoveryCall}
+            </a>
             <button className="px-8 py-4 bg-white/20 hover:bg-white/30 text-white font-semibold rounded-lg transition-all duration-300 backdrop-blur-sm border border-white/30">
               {t.hero.learnMore}
             </button>

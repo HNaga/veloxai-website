@@ -12,6 +12,7 @@ export const translations = {
       title: 'Transform Your Business with AI Automation',
       subtitle: 'Streamline operations, reduce costs, and accelerate growth with intelligent automation solutions',
       cta: 'Get Started',
+      bookDiscoveryCall: 'Book Discovery Call',
       learnMore: 'Learn More',
     },
     // Services Section
@@ -111,6 +112,7 @@ export const translations = {
       title: 'حول عملك باستخدام أتمتة الذكاء الاصطناعي',
       subtitle: 'قم بتبسيط العمليات وتقليل التكاليف وتسريع النمو باستخدام حلول الأتمتة الذكية',
       cta: 'ابدأ الآن',
+      bookDiscoveryCall: 'احجز مكالمة اكتشاف',
       learnMore: 'تعرف على المزيد',
     },
     // Services Section
