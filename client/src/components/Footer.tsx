@@ -1,6 +1,6 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { translations } from '@/lib/translations';
-import { Mail, Phone, Linkedin, Globe, Send } from 'lucide-react';
+import { Mail, Phone, Linkedin, Globe, Send, Facebook } from 'lucide-react';
 
 export default function Footer() {
   const { language, isArabic } = useLanguage();
@@ -92,6 +92,14 @@ export default function Footer() {
                 className="w-10 h-10 rounded-lg bg-secondary hover:bg-accent hover:text-accent-foreground transition-colors flex items-center justify-center"
               >
                 <Send size={18} />
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=61585117334541"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-lg bg-secondary hover:bg-accent hover:text-accent-foreground transition-colors flex items-center justify-center"
+              >
+                <Facebook size={18} />
               </a>
             </div>
           </div>
