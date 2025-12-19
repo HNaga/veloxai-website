@@ -12,8 +12,15 @@ export default function HeroSection() {
     setLocation("#contact");
   };
 
+  const handleLearnMoreClick = () => {
+    const servicesSection = document.getElementById('services');
+    if (servicesSection) {
+      servicesSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <section id="home" className={`relative min-h-screen flex items-center overflow-hidden ${isArabic ? 'rtl' : 'ltr'}`}>
+    <section id="home" className={`relative min-h-[90vh] flex items-center pt-20 overflow-hidden ${isArabic ? 'rtl' : 'ltr'}`}>
       {/* Background Image */}
       <div
         className="absolute inset-0 z-0"
@@ -53,7 +60,10 @@ export default function HeroSection() {
             >
               {t.hero.bookDiscoveryCall}
             </a>
-            <button className="px-8 py-4 bg-white/20 hover:bg-white/30 text-white font-semibold rounded-lg transition-all duration-300 backdrop-blur-sm border border-white/30">
+            <button 
+              onClick={handleLearnMoreClick}
+              className="px-8 py-4 bg-white/20 hover:bg-white/30 text-white font-semibold rounded-lg transition-all duration-300 backdrop-blur-sm border border-white/30"
+            >
               {t.hero.learnMore}
             </button>
           </div>

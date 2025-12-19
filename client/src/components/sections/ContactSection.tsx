@@ -12,22 +12,48 @@ export default function ContactSection() {
     subject: '',
     message: '',
   });
+  const [errors, setErrors] = useState<{ [key: string]: string }>({});
   const [submitted, setSubmitted] = useState(false);
+
+  const validateForm = () => {
+    const newErrors: { [key: string]: string } = {};
+    if (!formData.name.trim()) {
+      newErrors.name = isArabic ? 'الاسم مطلوب' : 'Name is required';
+    }
+    if (!formData.email.trim()) {
+      newErrors.email = isArabic ? 'البريد الإلكتروني مطلوب' : 'Email is required';
+    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(formData.email)) {
+      newErrors.email = isArabic ? 'صيغة البريد الإلكتروني غير صالحة' : 'Invalid email address';
+    }
+    if (!formData.subject.trim()) {
+      newErrors.subject = isArabic ? 'الموضوع مطلوب' : 'Subject is required';
+    }
+    if (!formData.message.trim()) {
+      newErrors.message = isArabic ? 'الرسالة مطلوبة' : 'Message is required';
+    }
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    if (!validateForm()) {
+      return;
+    }
     // Here you would typically send the form data to a server
     console.log('Form submitted:', formData);
     setSubmitted(true);
     setTimeout(() => {
       setSubmitted(false);
       setFormData({ name: '', email: '', subject: '', message: '' });
+      setErrors({});
     }, 3000);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
+    setErrors((prev) => ({ ...prev, [name]: '' })); // Clear error when user starts typing
   };
 
   return (
@@ -89,6 +115,7 @@ export default function ContactSection() {
                     className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent transition-all"
                     placeholder={isArabic ? 'أدخل اسمك' : 'Enter your name'}
                   />
+                  {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
                 </div>
 
                 {/* Email */}
@@ -101,10 +128,10 @@ export default function ContactSection() {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    required
                     className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent transition-all"
                     placeholder={isArabic ? 'أدخل بريدك الإلكتروني' : 'Enter your email'}
                   />
+                  {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
                 </div>
               </div>
 
@@ -118,10 +145,10 @@ export default function ContactSection() {
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
-                  required
                   className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent transition-all"
                   placeholder={isArabic ? 'أدخل الموضوع' : 'Enter subject'}
                 />
+                {errors.subject && <p className="text-red-500 text-sm mt-1">{errors.subject}</p>}
               </div>
 
               {/* Message */}
@@ -133,11 +160,11 @@ export default function ContactSection() {
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  required
                   rows={5}
                   className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent transition-all resize-none"
                   placeholder={isArabic ? 'أدخل رسالتك' : 'Enter your message'}
                 ></textarea>
+                {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
               </div>
 
               {/* Submit Button */}
