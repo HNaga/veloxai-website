@@ -22,10 +22,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">V</span>
-            </div>
-            <span className="font-bold text-xl text-foreground hidden sm:inline">VeloxAI</span>
+            <img src="/images/Velox-Logo.png" alt="VeloxAI Logo" className="h-10 w-auto" />
           </div>
 
           {/* Desktop Navigation */}

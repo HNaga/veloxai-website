@@ -13,10 +13,7 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold">V</span>
-              </div>
-              <span className="font-bold text-lg">VeloxAI</span>
+              <img src="/images/Velox-Logo.png" alt="VeloxAI Logo" className="h-8 w-auto" />
             </div>
             <p className="text-muted-foreground text-sm">
               {isArabic
