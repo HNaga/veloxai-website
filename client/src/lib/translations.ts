@@ -81,6 +81,11 @@ export const translations = {
       send: 'Send Message',
       emailAddress: 'info@veloxai.com',
     },
+    // Testimonials Section
+    testimonials: {
+      title: 'What Our Clients Say',
+      subtitle: 'Hear from businesses that have transformed with VeloxAI',
+    },
     // Footer
     footer: {
       copyright: '© 2024 VeloxAI. All rights reserved.',
@@ -178,6 +183,11 @@ export const translations = {
       message: 'الرسالة',
       send: 'إرسال الرسالة',
       emailAddress: 'info@veloxai.com',
+    },
+    // Testimonials Section
+    testimonials: {
+      title: 'ماذا يقول عملاؤنا',
+      subtitle: 'استمع من الشركات التي تحولت مع VeloxAI',
     },
     // Footer
     footer: {
