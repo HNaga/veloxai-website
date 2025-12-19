@@ -102,10 +102,10 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
             <p>{t.footer.copyright}</p>
             <div className="flex gap-6">
-              <a href="#" className="hover:text-foreground transition-colors">
+              <a href="/privacy-policy" className="hover:text-foreground transition-colors">
                 {t.footer.links.privacy}
               </a>
-              <a href="#" className="hover:text-foreground transition-colors">
+              <a href="/terms-of-service" className="hover:text-foreground transition-colors">
                 {t.footer.links.terms}
               </a>
             </div>
