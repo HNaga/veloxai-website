@@ -1,6 +1,6 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { translations } from '@/lib/translations';
-import { Mail, Phone, Send } from 'lucide-react';
+import { Mail, Send } from 'lucide-react';
 import { useState } from 'react';
 
 export default function ContactSection() {
@@ -56,19 +56,6 @@ export default function ContactSection() {
               </a>
             </div>
 
-            {/* Phone */}
-            <div className="card-elevated p-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-accent to-teal-400 rounded-lg flex items-center justify-center mb-4">
-                <Phone className="text-white" size={24} />
-              </div>
-              <h3 className="font-semibold mb-2 text-foreground">{t.contact.phone}</h3>
-              <a
-                href="tel:+15551234567"
-                className="text-accent hover:text-accent/80 transition-colors"
-              >
-                {t.contact.phoneNumber}
-              </a>
-            </div>
 
             {/* Response Time */}
             <div className="card-elevated p-6">

@@ -77,11 +77,9 @@ export const translations = {
       title: 'Get In Touch',
       subtitle: 'Ready to transform your business? Contact us today',
       email: 'Email',
-      phone: 'Phone',
       message: 'Message',
       send: 'Send Message',
       emailAddress: 'info@veloxai.com',
-      phoneNumber: '+1 (555) 123-4567',
     },
     // Footer
     footer: {
@@ -177,11 +175,9 @@ export const translations = {
       title: 'تواصل معنا',
       subtitle: 'هل أنت مستعد لتحويل عملك؟ اتصل بنا اليوم',
       email: 'البريد الإلكتروني',
-      phone: 'الهاتف',
       message: 'الرسالة',
       send: 'إرسال الرسالة',
       emailAddress: 'info@veloxai.com',
-      phoneNumber: '+1 (555) 123-4567',
     },
     // Footer
     footer: {

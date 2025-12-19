@@ -1,6 +1,6 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { translations } from '@/lib/translations';
-import { Mail, Phone, Linkedin, Twitter, Facebook } from 'lucide-react';
+import { Mail, Phone, Linkedin, Globe, Send } from 'lucide-react';
 
 export default function Footer() {
   const { language, isArabic } = useLanguage();
@@ -57,12 +57,6 @@ export default function Footer() {
                   {t.contact.emailAddress}
                 </a>
               </li>
-              <li className="flex items-center gap-2 text-muted-foreground">
-                <Phone size={16} className="flex-shrink-0" />
-                <a href="tel:+15551234567" className="hover:text-foreground transition-colors">
-                  {t.contact.phoneNumber}
-                </a>
-              </li>
             </ul>
           </div>
 
@@ -71,22 +65,36 @@ export default function Footer() {
             <h3 className="font-semibold mb-4">{isArabic ? 'تابعنا' : 'Follow Us'}</h3>
             <div className="flex gap-4">
               <a
-                href="#"
+                href="https://veloxai.work"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-lg bg-secondary hover:bg-accent hover:text-accent-foreground transition-colors flex items-center justify-center"
+              >
+                <Globe size={18} />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/110616209"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-secondary hover:bg-accent hover:text-accent-foreground transition-colors flex items-center justify-center"
               >
                 <Linkedin size={18} />
               </a>
               <a
-                href="#"
+                href="https://t.me/VeloxAI"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-secondary hover:bg-accent hover:text-accent-foreground transition-colors flex items-center justify-center"
               >
-                <Twitter size={18} />
+                <Send size={18} />
               </a>
               <a
-                href="#"
+                href="https://t.me/VeloxAI_Group"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-secondary hover:bg-accent hover:text-accent-foreground transition-colors flex items-center justify-center"
               >
-                <Facebook size={18} />
+                <Send size={18} />
               </a>
             </div>
           </div>
